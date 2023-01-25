@@ -21,7 +21,7 @@ pygame.time.wait(500)
 screen.fill([0, 0, 255])
 
 font = pygame.font.SysFont(None, 72)
-text = font.render("Jeremy Wong", True, "black")
+text = font.render("Hello Jeremy", True, "black")
 
 screen.blit(text, screen.get_rect().center)
 
