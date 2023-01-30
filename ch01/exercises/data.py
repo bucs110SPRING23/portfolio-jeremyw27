@@ -7,4 +7,4 @@ print(15 % 10)
 print(10 % 15)
 print(10 % 10)
 print(0 % 10)
-print(10 / 15) #This numerical expression doesn't round the last digit.
+print(10 / 15) #The last digit in the answer is not rounded. The 6's cannot repeat infinitely because it is a float.
