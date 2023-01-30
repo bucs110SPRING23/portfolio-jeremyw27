@@ -1,3 +1,3 @@
 shape = "octagon"
 sides = 8
-print(((sides-2)*180)/sides)
+print(360/sides)
