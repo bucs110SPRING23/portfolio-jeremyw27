@@ -10,12 +10,12 @@ classes_per_week = 5
 cost_per_class = cost_per_week/classes_per_week
 print("Cost per class:", cost_per_class)
 print(
-    classes_per_week, type(classes_per_week),
-    cost_per_class, type(cost_per_class),
-    weeks, type(weeks),
-    classes, type(classes),
-    tuition, type(tuition),
-    cost_per_week, type(cost_per_week)
+   classes_per_week, type(classes_per_week),
+   cost_per_class, type(cost_per_class),
+   weeks, type(weeks),
+   classes, type(classes),
+   tuition, type(tuition),
+   cost_per_week, type(cost_per_week)
 )
 
 #Part B
