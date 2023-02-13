@@ -23,6 +23,9 @@ leonardo.forward(random.randrange(1,101))
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
+
+window.exitonclick()
+
 # PART B - complete part B here
 
 
