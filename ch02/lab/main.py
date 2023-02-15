@@ -37,12 +37,11 @@ leonardo.goto(-100,-20)
 window.exitonclick()
 
 
-
 # PART B - complete part B here
-window = pygame.display.set_mode()
-window.fill("white")
+screen = pygame.display.set_mode()
+screen.fill("white")
 pygame.display.flip()
-screen_size = window.get_size()
+screen_size = screen.get_size()
 
 xpos = screen_size[0] / 2
 ypos = screen_size[1] / 2 - 250
@@ -56,10 +55,10 @@ for i in range(num_sides):
    xpos = xpos + side_length * math.cos(radians)
    ypos = ypos + side_length * math.sin(radians)
    points.append([xpos,ypos])
-pygame.draw.polygon(window, "forestgreen", points)
+pygame.draw.polygon(screen, "forestgreen", points)
 pygame.display.flip()
-pygame.time.wait(1500)
-window.fill("lightblue")
+pygame.time.wait(1000)
+screen.fill("lightblue")
 pygame.display.flip()
 
 points = []
@@ -70,10 +69,10 @@ for i in range(num_sides):
    xpos = xpos + side_length * math.cos(radians)
    ypos = ypos + side_length * math.sin(radians)
    points.append([xpos,ypos])
-pygame.draw.polygon(window, "magenta", points)
+pygame.draw.polygon(screen, "magenta", points)
 pygame.display.flip()
-pygame.time.wait(1500)
-window.fill("orange")
+pygame.time.wait(1000)
+screen.fill("orange")
 pygame.display.flip()
 
 points = []
@@ -84,10 +83,10 @@ for i in range(num_sides):
    xpos = xpos + side_length * math.cos(radians)
    ypos = ypos + side_length * math.sin(radians)
    points.append([xpos,ypos])
-pygame.draw.polygon(window, "black", points)
+pygame.draw.polygon(screen, "black", points)
 pygame.display.flip()
-pygame.time.wait(1500)
-window.fill("blue")
+pygame.time.wait(1000)
+screen.fill("blue")
 pygame.display.flip()
 
 points = []
@@ -99,10 +98,10 @@ for i in range(num_sides):
    xpos = xpos + side_length * math.cos(radians)
    ypos = ypos + side_length * math.sin(radians)
    points.append([xpos,ypos])
-pygame.draw.polygon(window, "lightgreen", points)
+pygame.draw.polygon(screen, "lightgreen", points)
 pygame.display.flip()
-pygame.time.wait(1500)
-window.fill("yellow")
+pygame.time.wait(1000)
+screen.fill("yellow")
 pygame.display.flip()
 
 points = []
@@ -114,10 +113,10 @@ for i in range(num_sides):
    xpos = xpos + side_length * math.cos(radians)
    ypos = ypos + side_length * math.sin(radians)
    points.append([xpos,ypos])
-pygame.draw.polygon(window, "red", points)
+pygame.draw.polygon(screen, "red", points)
 pygame.display.flip()
-pygame.time.wait(1500)
-window.fill("purple")
+pygame.time.wait(1000)
+screen.fill("purple")
 pygame.display.flip()
 
 points = []
@@ -129,6 +128,6 @@ for i in range(num_sides):
    xpos = xpos + side_length * math.cos(radians)
    ypos = ypos + side_length * math.sin(radians)
    points.append([xpos,ypos])
-pygame.draw.polygon(window, "white", points)
+pygame.draw.polygon(screen, "white", points)
 pygame.display.flip()
-pygame.time.wait(1500)
+pygame.time.wait(1000)
