@@ -22,6 +22,7 @@ leonardo.goto(-100,-20)
 
 ## 5. Your PART A code goes here
 #Race 1
+window.delay(100)
 michelangelo.forward(random.randrange(1, 101))
 leonardo.forward(random.randrange(1, 101))
 michelangelo.goto(-100,20)
