@@ -25,10 +25,12 @@ for i in range(10):
         xcor = random.randrange(screen_size[0]+1)
         ycor = random.randrange(screen_size[1]+1)
         pygame.time.wait(400)
+        print(xcor, ycor)
     else:
         pygame.draw.circle(screen, "red", [xcor, ycor], 15)
         xcor = random.randrange(screen_size[0]+1)
         ycor = random.randrange(screen_size[1]+1)
         pygame.time.wait(400)
+        print(xcor, ycor)
     pygame.display.flip()
 pygame.time.wait(1500)

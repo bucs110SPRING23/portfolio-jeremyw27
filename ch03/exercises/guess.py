@@ -1,6 +1,6 @@
 import random
 rand = random.randrange(1,11)
-guess = int(input("Guess the number: "))
+guess = int(input("Guess a number between 1 and 10: "))
 print(guess)
 
 if guess == rand:
