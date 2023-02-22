@@ -10,17 +10,25 @@ screen.fill("lightblue")
 pygame.display.flip()
 pygame.draw.circle(screen, "black", [screen_size[0]/2, screen_size[1]/2], 300)
 pygame.draw.circle(screen, "white", [screen_size[0]/2, screen_size[1]/2], 298)
+pygame.draw.line(screen, "black", [300, 0], [300, 600], 2)
+pygame.draw.line(screen, "black", [0, 300], [600, 300], 2)
 pygame.display.flip()
 
 #Part B
-distance_from_center = math.hypot(x1-screen_size[0]/2, y1-screen_size[1]/2)
+xcor = random.randrange(screen_size[0]+1)
+ycor = random.randrange(screen_size[1]+1)
+distance_from_center = math.hypot(xcor - screen_size[0]/2, ycor - screen_size[1]/2)
 is_in_circle = distance_from_center <= screen_size[0]/2
 for i in range(10):
     if is_in_circle == True:
-        pygame.draw.circle(screen, "green", [random.randrange(screen_size[0]), random.randrange(screen_size[1])], 30)
+        pygame.draw.circle(screen, "green", [xcor, ycor], 15)
+        xcor = random.randrange(screen_size[0]+1)
+        ycor = random.randrange(screen_size[1]+1)
+        pygame.time.wait(400)
     else:
-        pygame.draw.circle(screen, "red", [random.randrange(screen_size[0]), random.randrange(screen_size[1])], 30)
+        pygame.draw.circle(screen, "red", [xcor, ycor], 15)
+        xcor = random.randrange(screen_size[0]+1)
+        ycor = random.randrange(screen_size[1]+1)
+        pygame.time.wait(400)
     pygame.display.flip()
-
-pygame.time.wait(2500)
-print(random.randrange(screen_size[0]))
+pygame.time.wait(1500)
