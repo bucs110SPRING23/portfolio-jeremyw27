@@ -24,13 +24,17 @@ for i in range(10):
         pygame.draw.circle(screen, "green", [xcor, ycor], 15)
         xcor = random.randrange(screen_size[0]+1)
         ycor = random.randrange(screen_size[1]+1)
-        pygame.time.wait(400)
-        print(xcor, ycor)
+        distance_from_center = math.hypot(xcor - screen_size[0]/2, ycor - screen_size[1]/2)
+        is_in_circle = distance_from_center <= screen_size[0]/2
+        pygame.time.wait(250)
+        print(xcor, ycor, distance_from_center)
     else:
         pygame.draw.circle(screen, "red", [xcor, ycor], 15)
         xcor = random.randrange(screen_size[0]+1)
         ycor = random.randrange(screen_size[1]+1)
-        pygame.time.wait(400)
-        print(xcor, ycor)
+        distance_from_center = math.hypot(xcor - screen_size[0]/2, ycor - screen_size[1]/2)
+        is_in_circle = distance_from_center <= screen_size[0]/2
+        pygame.time.wait(250)
+        print(xcor, ycor, distance_from_center)
     pygame.display.flip()
 pygame.time.wait(1500)
