@@ -23,10 +23,8 @@ for i in range(10):
     if is_in_circle == True:
         pygame.draw.circle(screen, "green", [xcor, ycor], 15) #green is inside dartboard
         pygame.time.wait(300)
-        print(xcor, ycor, distance_from_center)
     else:
         pygame.draw.circle(screen, "red", [xcor, ycor], 15) #red is outside dartboard
         pygame.time.wait(300)
-        print(xcor, ycor, distance_from_center)
     pygame.display.flip()
 pygame.time.wait(1200)
