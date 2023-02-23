@@ -15,26 +15,18 @@ pygame.draw.line(screen, "black", [0, 300], [600, 300], 2)
 pygame.display.flip()
 
 #Part B
-xcor = random.randrange(screen_size[0]+1)
-ycor = random.randrange(screen_size[1]+1)
-distance_from_center = math.hypot(xcor - screen_size[0]/2, ycor - screen_size[1]/2)
-is_in_circle = distance_from_center <= screen_size[0]/2
 for i in range(10):
+    xcor = random.randrange(screen_size[0]+1)
+    ycor = random.randrange(screen_size[1]+1)
+    distance_from_center = math.hypot(xcor - screen_size[0]/2, ycor - screen_size[1]/2)
+    is_in_circle = distance_from_center <= screen_size[0]/2
     if is_in_circle == True:
-        pygame.draw.circle(screen, "green", [xcor, ycor], 15)
-        xcor = random.randrange(screen_size[0]+1)
-        ycor = random.randrange(screen_size[1]+1)
-        distance_from_center = math.hypot(xcor - screen_size[0]/2, ycor - screen_size[1]/2)
-        is_in_circle = distance_from_center <= screen_size[0]/2
-        pygame.time.wait(250)
+        pygame.draw.circle(screen, "green", [xcor, ycor], 15) #green is inside dartboard
+        pygame.time.wait(300)
         print(xcor, ycor, distance_from_center)
     else:
-        pygame.draw.circle(screen, "red", [xcor, ycor], 15)
-        xcor = random.randrange(screen_size[0]+1)
-        ycor = random.randrange(screen_size[1]+1)
-        distance_from_center = math.hypot(xcor - screen_size[0]/2, ycor - screen_size[1]/2)
-        is_in_circle = distance_from_center <= screen_size[0]/2
-        pygame.time.wait(250)
+        pygame.draw.circle(screen, "red", [xcor, ycor], 15) #red is outside dartboard
+        pygame.time.wait(300)
         print(xcor, ycor, distance_from_center)
     pygame.display.flip()
-pygame.time.wait(1500)
+pygame.time.wait(1200)
