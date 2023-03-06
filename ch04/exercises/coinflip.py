@@ -1,14 +1,21 @@
 import turtle
 import random
 
-screen = turtle.Screen()
+window = turtle.Screen()
 turtle1 = turtle.Turtle()
-x = screen.screensize([0])
-y = screen.screensize([1])
-print(x)
-turtle1.goto(int(x)/2,int(y)/2)
+inside_window = True
 
-if random.randrange(2) == 0:
-    turtle1.left(90)
-elif random.randrange(2) == 1:
-    turtle1.right(90)
+while inside_window:
+    coinflip = random.randrange(0,2)
+    if coinflip == 0: #heads
+        turtle1.left(90)
+    else: #tails
+        turtle1.right(90)
+    turtle1.forward(50)
+    
+    turtle_xcor = window.window_width()/2
+    turtle_ycor = window.window_height()/2
+    if abs(turtle1.xcor()) > turtle_xcor or abs(turtle1.ycor()) > turtle_ycor:
+        inside_window = False
+
+window.exitonclick()
