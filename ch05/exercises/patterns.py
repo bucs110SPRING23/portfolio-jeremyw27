@@ -1,11 +1,11 @@
-rows = int(input("enter number of rows:"))
-
-def star_pyramid():
+def star_pyramid(rows):
     for i in range(1,rows+1):
         print("*" * i)
-star_pyramid()
 
-def rstar_pyramid():
+def rstar_pyramid(rows):
     for i in range(rows, 0, -1):
         print("*" * i)
-rstar_pyramid()
+
+num_rows = int(input("enter number of rows:"))
+star_pyramid(num_rows)
+rstar_pyramid(num_rows)
