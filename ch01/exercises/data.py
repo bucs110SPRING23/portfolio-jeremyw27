@@ -1,0 +1,10 @@
+print(10 * 5)
+print(10 ** 2)
+print(15 / 10)
+print(15 // 10)
+print(-15 // 10)
+print(15 % 10)
+print(10 % 15)
+print(10 % 10)
+print(0 % 10)
+print(10 / 15) #The last digit in the answer is not rounded, so it is less precise. The 6's cannot repeat infinitely because it is a float, which has a fixed number of bits.
