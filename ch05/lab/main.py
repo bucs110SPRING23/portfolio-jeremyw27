@@ -1,7 +1,5 @@
 import pygame
-pygame.init()
 
-#Part A
 def threenp1(n):
     count = 0
     while n > 1.0:
@@ -19,21 +17,26 @@ def threep1range(upper_limit):
         objs_in_sequence[_] = threenp1(_)
     return objs_in_sequence
 
-def main():
-    n = int(input("Enter some upper limit here: "))
-    print(threep1range(n))
-
-main()
-
-#Part B
 def graph_coordinates(threeplus1_iters_dict):
     coordinates = [threeplus1_iters_dict]
     new_display = pygame.display.set_mode()
-    flipped_screen = pygame.transform.flip(new_display, False, True)
+    new_display = pygame.transform.flip(new_display, False, True)
     width, height = new_display.get_size()
-    scaled_screen = pygame.transform.scale(new_display, (width*3, height*3))
-    new_display.blit(flipped_screen, (0,0))
-    pygame.display.flip()
-    pygame.time.wait(2000)
+    new_display = pygame.transform.scale(new_display, (width*3, height*3))
+    new_display.blit(new_display, (0,0))
 
-graph_coordinates(threep1range(upper_limit=0))
+    max_so_far = 0
+    for _ in threeplus1_iters_dict:
+        pass
+
+    font = pygame.font.Font(None, 36)
+    msg = font.render("display", True, "black")
+    display.blit(msg, pos)
+
+
+def main():
+    pygame.init()
+    upper_limit = int(input("Enter some upper limit here: "))
+    print(threep1range(upper_limit))
+    graph_coordinates(threep1range(upper_limit))
+main()
