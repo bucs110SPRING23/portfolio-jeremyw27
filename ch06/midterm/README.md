@@ -7,8 +7,7 @@ This program draws a flower with six petals. The user can customize the color of
 None
 
 ## REFERENCES *(any resources you use outside of class materials)*
--Coloring in shapes: https://www.geeksforgeeks.org/draw-color-filled-shapes-in-turtle-python/ \n
--turtle.circle() method and drawing parts of circles: https://www.geeksforgeeks.org/turtle-circle-method-in-python/
+Coloring in shapes: https://www.geeksforgeeks.org/draw-color-filled-shapes-in-turtle-python/; turtle.circle() method and drawing parts of circles: https://www.geeksforgeeks.org/turtle-circle-method-in-python/
 
 ## MISCELLANEOUS COMMENTS *(anything else you would like the grader to know)*
 None
