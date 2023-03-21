@@ -1,7 +1,7 @@
 import turtle
 
 #drawing flower center
-def flower_center(center_radius, center_color):
+def flower_center(center_radius=0, center_color=" "):
     '''
     This function is to draw the center of the flower with a color that the user inputs.
     The radius of the center is calculated by dividing the radius of the petal by 3.
@@ -14,7 +14,7 @@ def flower_center(center_radius, center_color):
     pen.end_fill()
 
 #drawing flower petals
-def flower_petal(flower_color, petal_size):
+def flower_petal(flower_color=" ", petal_size=0):
     '''
     This function is to draw a flower with six petals using the color that the user inputs.
     The size of the petals and thus the flower is determined by user input.
