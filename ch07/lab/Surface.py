@@ -14,6 +14,6 @@ class Surface:
         """
         returns Rectangle attribute in self.rect
         args: none
-        return: Rectangle attribute (string)
+        return: Rectangle attribute through self.rect
         """
         return self.rect
