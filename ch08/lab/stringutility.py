@@ -49,20 +49,10 @@ class StringUtility:
         args: none
         return: string
         """
-        result = ""
-        for i in self.string:
-            if i.isalpha():
-                if i.isupper():
-                    start = ord('A')
-                else:
-                    start = ord('a')
-                new_pos = (ord(i) - start + len(self.string)) % 26
-                char = chr(start + new_pos)
-            result += char
-        return result
+        return "".join((chr((ord('a') + (ord(i) - ord('a') + len(self.string)) % 26))) if i.islower() else chr((ord('A') + (ord(i) - ord('A') + len(self.string)) % 26)) if i.isalpha() else " " for i in self.string)
     
-    # attempts/work for cipher extra credit
 
+    # attempts/work for cipher extra credit
     # "".join((list(chr((ord('a') + (ord(i) - ord('a') + len(self.string)) % 26)) if i.islower() else '' for i in self.string)) + (list(chr((ord('A') + (ord(i) - ord('A') + len(self.string)) % 26)) if i.isupper() else '' for i in self.string)))
     #(ord('A') + (ord(i) - ord('A') + len(self.string)) % 26) for  i in self.string]
     #[chr(ord('a') + (ord(i) - ord('a') + len(self.string)) % 26) for  i in self.string]
