@@ -14,8 +14,5 @@ def main():
     else:
         get_emoji = emoji.get()
         print(get_emoji*3)
-    
-    print(event.__str__())
-    print(emoji.__str__())
 
 main()
