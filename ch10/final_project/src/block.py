@@ -1,22 +1,19 @@
 import pygame
 import random
-from src.score import GAME_SPEED
-
-BLOCK_POS_Y = 362
-BLOCK_SCALE = 50
+from src.utility import Utility
 
 class Block(pygame.sprite.Sprite):
     def __init__(self, image):
         super().__init__()
 
         self.width, self.height = pygame.display.get_window_size()
-        self.image = pygame.transform.scale(image, (BLOCK_SCALE, BLOCK_SCALE))
+        self.image = pygame.transform.scale(image, (50, 50))
         self.rect = self.image.get_rect()
         self.rect.x = self.width
-        self.rect.y = BLOCK_POS_Y
+        self.rect.y = 362
 
     def update(self):
-        self.rect.x -= GAME_SPEED
+        self.rect.x -= Utility.speed
         if self.rect.x <= -self.rect.width:
             self.kill()
 

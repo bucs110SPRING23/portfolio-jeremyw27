@@ -1,38 +1,41 @@
 import pygame
-from src.score import Score
-
-SCREEN_WIDTH = 1200
-SCREEN_HEIGHT = 500
-BG_POS_X = 0
-BG_POS_Y = 0
-GAME_SPEED = 5
+from src.utility import Utility
 
 class Background:
     def __init__(self, img="assets/background.png"):
-        pygame.init()
-        self.width = SCREEN_WIDTH
-        self.height = SCREEN_HEIGHT
-        self.bg_x = BG_POS_X
-        self.bg_y = BG_POS_Y
+        """
+        Creates the background and scales it reasonably.
+        args: none
+        return: none
+        """
 
+        # position of background
+        self.bg_x = 0
+        self.bg_y = 0
+
+        # creating the background itself
         self.image = pygame.image.load(img)
-        self.screen = pygame.display.set_mode((self.width, self.height))
+        self.screen = pygame.display.set_mode((Utility.SCREEN_WIDTH, Utility.SCREEN_HEIGHT))
         self.background = pygame.transform.smoothscale(self.image, self.screen.get_size())
         
 
     def update(self):
+        """
+        Moves the background across the screen; when it moves off screen, a new one is constantly created to loop the background.
+        args: none
+        return: none
+        """
         self.screen.blit(self.background, (self.bg_x, self.bg_y))
-        self.screen.blit(self.background, (self.width + self.bg_x, self.bg_y))
-        if self.bg_x <= -self.width:
-            self.screen.blit(self.background, (self.width + self.bg_x, self.bg_y))
+        self.screen.blit(self.background, (Utility.SCREEN_WIDTH + self.bg_x, self.bg_y))
+        if self.bg_x <= -Utility.SCREEN_WIDTH:
+            self.screen.blit(self.background, (Utility.SCREEN_WIDTH + self.bg_x, self.bg_y))
             self.bg_x = 0
-        self.bg_x -= GAME_SPEED
+        self.bg_x -= Utility.GAME_SPEED
 
-    #def screen_size(self):
-        #return self.screen
-
-    #def width(self) -> int:
-        #return SCREEN_WIDTH
-
-    #def height(self) -> int:
-        #return SCREEN_HEIGHT
+    def get_screen(self):
+        """
+        Function to return the size of the screen.
+        args: none
+        return: tuple
+        """
+        return self.screen
